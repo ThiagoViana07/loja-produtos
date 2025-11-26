@@ -1,5 +1,5 @@
 from produto import Produto
-
+from log import registrar_log
 def main():
     produto1 = Produto("Teclado mecânico",350, estoque=10)
     produto2 = Produto("Mouse Gamer",150, estoque=20)
@@ -11,6 +11,7 @@ def main():
     print("\nVendendo 5 teclados..")
     if produto1.vender(2):
         print("Venda realizada com sucesso!")
+        registrar_log(f"Venda de 5 teclados registradas com sucesso.")
     else:
         print("Estoque insuficiente.")
         
